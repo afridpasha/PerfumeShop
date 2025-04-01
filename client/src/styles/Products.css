@@ -1,0 +1,141 @@
+.products-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.products-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.products-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #7c5295;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.filter-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f0e6f5;
+  border-color: #7c5295;
+}
+
+.filter-btn.active {
+  background-color: #7c5295;
+  color: white;
+  border-color: #7c5295;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 0;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.error-banner {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-banner button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.error-banner button:hover {
+  background-color: #c82333;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: 1rem;
+  }
+  
+  .products-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+} 
